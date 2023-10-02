@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
 import logo from '../assets/Images/Logos/cape-bake-logo_prev_ui.png'
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,43 +15,49 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#e65828] bg-opacity-100 fixed w-full top-0 z-10 md:py-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav name="home" className="bg-[#e65828] bg-opacity-100 fixed w-full top-0 z-10 md:py-2 cursor-pointer">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img
-                className="w-32 md:w-52 h-auto"
-                src= { logo }
-                alt="Logo"
-              />
+              <Link to="hero" smooth={true} duration={500}>
+                <img
+                  className="w-36 md:w-52 h-auto"
+                  src= { logo }
+                  alt="Logo"
+                />
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a
-                  href="#about"
+                <Link
+                  to="about"
+                  smooth={true} duration={500}
                   className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                   >
                   About Us
-                </a>
-                <a
-                  href="#products"
+                </Link>
+                <Link
+                  to="products"
+                  smooth={true} duration={500}
                   className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Products
-                </a>
-                <a
-                  href="#testimonials"
+                </Link>
+                <Link
+                  to="testimonials"
+                  smooth={true} duration={500}
                   className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Testimonials
-                </a>
-                <a
-                  href="#contact"
+                </Link>
+                <Link
+                  to="contact"
+                  smooth={true} duration={500}
                   className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -67,9 +74,9 @@ const Navbar = () => {
               aria-expanded={isOpen}
             >
               {isOpen ? (
-                <RiCloseLine className="block h-6 w-6" />
+                <RiCloseLine className="block h-6 w-6 text-white" />
               ) : (
-                <RiMenuLine className="block h-6 w-6" />
+                <RiMenuLine className="block h-6 w-6 text-white" />
               )}
             </button>
           </div>
@@ -77,35 +84,39 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#about"
+          <div className="flex flex-col items-center px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link
+              to="about"
+              smooth={true} duration={500}
               onClick={closeMenu}
-              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               About Us
-            </a>
-            <a
-              href="#products"
+            </Link>
+            <Link
+              to="products"
+              smooth={true} duration={500}
               onClick={closeMenu}
-              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Products
-            </a>
-            <a
-              href="#testimonials"
+            </Link>
+            <Link
+              to="testimonials"
+              smooth={true} duration={500}
               onClick={closeMenu}
-              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Testimonials
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="contact"
+              smooth={true} duration={500}
               onClick={closeMenu}
-              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       )}
