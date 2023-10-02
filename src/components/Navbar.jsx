@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white bg-opacity-50 fixed w-full top-0 z-10">
+    <nav className="bg-[#e65828] bg-opacity-100 fixed w-full top-0 z-10 md:py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -29,25 +29,25 @@ const Navbar = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   href="#about"
-                  className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  About
+                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                  About Us
                 </a>
                 <a
                   href="#products"
-                  className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Products
                 </a>
                 <a
                   href="#testimonials"
-                  className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Testimonials
                 </a>
                 <a
                   href="#contact"
-                  className="text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
                 </a>
@@ -81,28 +81,28 @@ const Navbar = () => {
             <a
               href="#about"
               onClick={closeMenu}
-              className="text-gray-600 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
-              About
+              About Us
             </a>
             <a
               href="#products"
               onClick={closeMenu}
-              className="text-gray-600 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Products
             </a>
             <a
               href="#testimonials"
               onClick={closeMenu}
-              className="text-gray-600 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Testimonials
             </a>
             <a
               href="#contact"
               onClick={closeMenu}
-              className="text-gray-600 hover:text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+              className="uppercase text-gray-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               Contact
             </a>
