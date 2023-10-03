@@ -9,7 +9,7 @@ const About = () => {
       <h3 className='text-gray-800 text-5xl font-medium py-20'>Quality Ingredients for Delicious Baked goods</h3>
 
       {/* Cards */}
-      <div className='flex pb-20 space-x-10'>
+      <div className='md:flex pb-20 md:space-x-10'>
         {/* Card 1 */}
         <div className='text-gray-800 hover:bg-slate-100 rounded-xl p-5'>
           <div className='text-4xl'><MdOutlineBakeryDining/></div>
@@ -30,14 +30,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className='flex items-center space-x-20 mx-28'>
+      <div className='md:flex items-center space-x-20 md:mx-28'>
         <div>
           <img src= {flaking} alt="Bread making" className='h-auto w-[100vw] rounded-xl'/>
         </div>
         <div className='text-gray-800 space-y-5'>
           <h3 className='text-6xl font-medium'>Indulge in the exquisite flavours of our artisanal bakery creations.</h3>
           <p>Our bakery products are crafted with love and passion, ensuring a delightful experience for your taste buds.</p>
-          <div className='flex'>
+          <div className='md:flex'>
             <div>
               <h3 className='text-5xl font-medium'>50%</h3>
               <p>Experience the joy of our delectable treats today!</p>
