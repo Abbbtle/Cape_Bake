@@ -16,70 +16,61 @@ const Navbar = () => {
 
   return (
     <nav name="home" className="bg-[#e65828] bg-opacity-100 fixed w-full top-0 z-10 md:py-2 cursor-pointer">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Link to="hero" smooth={true} duration={500}>
-                <img
-                  className="w-36 md:w-52 h-auto"
-                  src= { logo }
-                  alt="Logo"
-                />
-              </Link>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  to="about"
-                  smooth={true} duration={500}
-                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                  About Us
-                </Link>
-                <Link
-                  to="products"
-                  smooth={true} duration={500}
-                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Products
-                </Link>
-                <Link
-                  to="testimonials"
-                  smooth={true} duration={500}
-                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Testimonials
-                </Link>
-                <Link
-                  to="contact"
-                  smooth={true} duration={500}
-                  className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <div className="flex items-center">
+          <div className="flex-shrink-0">
+            <Link to="hero" smooth={true} duration={500}>
+              <img
+                className="w-36 md:w-52 h-auto"
+                src= { logo }
+                alt="Logo"
+              />
+            </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6">
-              {/* Render additional desktop-specific components here */}
-            </div>
-          </div>
-          <div className="md:hidden -mr-2">
-            <button
-              type="button"
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              aria-expanded={isOpen}
+          <div className="hidden md:flex items-baseline space-x-4 ml-10">
+            <Link
+              to="about"
+              smooth={true} duration={500}
+              className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
             >
-              {isOpen ? (
-                <RiCloseLine className="block h-6 w-6 text-white" />
-              ) : (
-                <RiMenuLine className="block h-6 w-6 text-white" />
-              )}
-            </button>
+              About Us
+            </Link>
+            <Link
+              to="products"
+              smooth={true} duration={500}
+              className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Products
+            </Link>
+            <Link
+              to="testimonials"
+              smooth={true} duration={500}
+              className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Testimonials
+            </Link>
+            <Link
+              to="contact"
+              smooth={true} duration={500}
+              className="uppercase text-white hover:underline px-3 py-2 rounded-md text-sm font-medium"
+            >
+              Contact
+            </Link>
           </div>
+        </div>
+        <div className="md:hidden -mr-2">
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <RiCloseLine className="block h-6 w-6 text-white" />
+            ) : (
+              <RiMenuLine className="block h-6 w-6 text-white" />
+            )}
+          </button>
         </div>
       </div>
       {isOpen && (
