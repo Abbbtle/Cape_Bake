@@ -1,5 +1,5 @@
 import React from 'react'
-import baked from '../assets/Images/Images/baked-goods.jpg'
+import pretzel from '../assets/Images/Images/pretzel.gif'
 
 const Hero = () => {
   return (
@@ -16,9 +16,9 @@ const Hero = () => {
 
         <div className='py-5 md:py-0'>
           <img 
-            src= {baked} 
+            src= {pretzel} 
             alt="baked-goods" 
-            className='h-auto w-[80vw] rounded-xl'
+            className='h-[60vh] w-[80vw] rounded-xl'
           />
         </div>
       </div>
