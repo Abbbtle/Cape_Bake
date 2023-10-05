@@ -4,13 +4,13 @@ import various from '../assets/Images/Images/various-cakes.jpg'
 const Products = () => {
   return (
     <div name="products">
-      <div className='bg-[#e65828] py-20'>
-        <div>
-          <div>
-            <h6>Delicious</h6>
-            <h4>Indulge in our mouthwatering bakery delights</h4>
+      <div className='bg-[#e65828] py-10'>
+        <div className='px-5 md:mx-[5%] md:flex space-y-2 items-center'>
+          <div className='md:w-1/2 space-y-2'>
+            <h6 className='font-medium'>Delicious</h6>
+            <h4 className='text-5xl font-bold'>Indulge in our mouthwatering bakery delights</h4>
           </div>
-          <div>
+          <div className='md:w-1/2 '>
             Experience the heavenly flavours of our best-selling bakery items. 
             From freshly baked bread to delectable pastries, we offer a wide range 
             of treats that will satisfy your cravings. Each item is crafted with love and care,
@@ -19,11 +19,12 @@ const Products = () => {
           </div>
         </div>
 
-        <div className='flex items-center justify-center py-10'>
-          <img src= {various} alt="various-cakes" className='h-auto w-[80vw] rounded-xl'/>
+        <div className='flex items-center justify-center pt-5'>
+          <img src= {various} alt="various-cakes" className='h-auto w-[90vw] rounded-xl'/>
         </div>
       </div>
 
+      
     </div>
   );
 };
